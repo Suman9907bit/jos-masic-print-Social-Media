@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://openconceptbangla.in/tools/tool.php?t=crop -->
+<html lang="en"><head><title>JOS Crop Image - Magic print</title></head>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  color:#172b4d;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+
+  background-image:url("https://img.magnific.com/free-photo/blurred-abstract-background-interior-view-looking-out-toward-empty-office-lobby-entrance-doors-glass-curtain-wall-with-frame_1339-6364.jpg?semt=ais_hybrid&w=740&q=80");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+.top{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background-image:url("https://media.istockphoto.com/id/2220042113/photo/blurred-abstract-glass-wall-from-building.jpg?s=612x612&w=0&k=20&c=6YbF77Dpg6gtRIF21xeliGTMsnknQ8WgSNeVuaIs-kI=");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  border-bottom:1px solid #dfe7ef
+}
+
+.bar{
+  max-width:1200px;
+  margin:auto;
+  height:74px;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.brand{
+  display:flex;
+  gap:11px;
+  align-items:center;
+  text-decoration:none;
+  color:#17324d
+}
+
+.brand .mark{
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  background:linear-gradient(135deg,aqua,navy);
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-weight:900
+}
+
+.brand b{
+  display:block;
+  font-size:20px
+}
+
+.brand small{
+  display:block;
+  color:#718096;
+  font-size:10px;
+  letter-spacing:1.5px;
+  font-weight:800
+}
+
+.bar nav{
+  display:flex;
+  gap:26px
+}
+
+.bar nav a,.back{
+  text-decoration:none;
+  color:#40566f;
+  font-weight:700
+}
+
+.bar nav a:hover,.back:hover{
+  color:#0f766e
+}
+
+.hero{
+  background:linear-gradient(135deg,#eef8f7,#f4f8fc 58%,#edf5ff);
+  padding:70px 20px 56px;
+  border-bottom:1px solid #dfe7ef
+}
+
+.hero-inner{
+  max-width:920px;
+  margin:auto;
+  text-align:center
+}
+
+.pill{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:99px;
+  background:#fff;
+  border:1px solid #d8e2eb;
+  color:#536b82;
+  font-weight:800;
+  font-size:12px
+}
+
+.hero h1{
+  font-size:50px;
+  margin:18px 0 12px;
+  line-height:1.06
+}
+
+.hero h1 span{
+  color:#0f766e
+}
+
+.hero p{
+  font-size:18px;
+  color:#65758a
+}
+
+.search{
+  margin:28px auto 16px;
+  background:#fff;
+  border:1px solid #d5e0ea;
+  box-shadow:0 12px 40px rgba(30,65,100,.08);
+  max-width:650px;
+  display:flex;
+  align-items:center;
+  padding:0 18px;
+  border-radius:16px
+}
+
+.search input{
+  width:100%;
+  border:0;
+  outline:0;
+  padding:18px;
+  font-size:16px;
+  background:transparent
+}
+
+.trust{
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  flex-wrap:wrap;
+  color:#687b90;
+  font-size:13px;
+  font-weight:700
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:42px 20px
+}
+
+.tool-section{
+  margin-bottom:44px
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:18px
+}
+
+.section-head h2{
+  margin:0;
+  font-size:25px
+}
+
+.section-head p{
+  margin:5px 0 0;
+  color:#7b8b9d
+}
+
+.section-head>span{
+  color:#7b8b9d;
+  font-size:13px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px
+}
+
+.tool-card{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:#fff;
+  border:1px solid #dfe7ef;
+  border-radius:16px;
+  padding:17px;
+  text-decoration:none;
+  color:inherit;
+  box-shadow:0 5px 16px rgba(30,65,100,.04);
+  transition:.2s
+}
+
+.tool-card:hover{
+  transform:translateY(-3px);
+  border-color:#7ccfc7;
+  box-shadow:0 14px 28px rgba(30,65,100,.09)
+}
+
+.ico{
+  width:48px;
+  height:48px;
+  border-radius:13px;
+  background:#e9f7f5;
+  display:grid;
+  place-items:center;
+  font-size:23px;
+  flex:0 0 auto;
+  color:#0f766e
+}
+
+.tc{
+  min-width:0
+}
+
+.tc h3{
+  font-size:15px;
+  margin:0 0 5px
+}
+
+.tc p{
+  font-size:12px;
+  line-height:1.35;
+  color:#7b8b9d;
+  margin:0
+}
+
+.go{
+  margin-left:auto;
+  color:#8a9aac;
+  font-size:25px
+}
+
+.exact{
+  margin:20px 0 45px
+}
+
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px
+}
+
+.chips a{
+  background:#fff;
+  border:1px solid #dce5ed;
+  border-radius:12px;
+  padding:11px 16px;
+  text-decoration:none;
+  color:#304b65;
+  font-weight:800
+}
+
+.chips a:hover{
+  border-color:#58bcb2;
+  color:#0f766e
+}
+
+footer{
+  background:#102a43;
+  color:#e5edf5;
+  padding:34px 20px;
+  display:flex;
+  gap:30px;
+  justify-content:space-between;
+  align-items:center
+}
+
+footer>div{
+  max-width:700px
+}
+
+footer p{
+  color:#aebdcc;
+  margin:8px 0 0
+}
+
+.tool-page{
+  max-width:1100px;
+  margin:auto;
+  padding:42px 20px
+}
+
+.tool-title{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:28px
+}
+
+.bigico{
+  width:62px;
+  height:62px;
+  border-radius:17px;
+  background:#e9f7f5;
+  display:grid;
+  place-items:center;
+  font-size:30px;
+  color:#0f766e
+}
+
+.tool-title h1{
+  margin:0 0 5px;
+  font-size:32px
+}
+
+.tool-title p{
+  margin:0;
+  color:#718399
+}
+
+.workspace{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:20px
+}
+
+.panel{
+  background:#fff;
+  border:1px solid #dfe7ef;
+  border-radius:20px;
+  padding:22px;
+  box-shadow:0 9px 30px rgba(30,65,100,.05)
+}
+
+.drop{
+  min-height:165px;
+  border:2px dashed #b9c8d6;
+  border-radius:17px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  background:#f8fbfd;
+  transition:.2s
+}
+
+.drop.drag{
+  border-color:#0f766e;
+  background:#eefaf8
+}
+
+.drop input{
+  display:none
+}
+
+.uploadIcon{
+  font-size:30px;
+  color:#0f766e
+}
+
+.drop b{
+  font-size:18px;
+  margin-top:6px
+}
+
+.drop small{
+  color:#8292a3;
+  margin-top:5px
+}
+
+.previewbox{
+  margin-top:16px;
+  min-height:290px;
+  background:#f5f8fb;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  overflow:auto;
+  padding:12px
+}
+
+.previewbox canvas{
+  max-width:100%;
+  max-height:430px;
+  display:none;
+  border-radius:10px
+}
+
+.previewbox #placeholder{
+  color:#8b9aaa
+}
+
+.fileinfo{
+  margin-top:12px;
+  background:#f1f5f9;
+  border-radius:11px;
+  padding:10px 12px;
+  color:#62758a;
+  font-size:13px
+}
+
+.controls h2{
+  margin-top:0
+}
+
+.field{
+  margin-bottom:14px
+}
+
+.field label{
+  display:block;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:6px;
+  color:#40566f
+}
+
+.row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #d3dee8;
+  border-radius:11px;
+  background:#fff;
+  font:inherit;
+  outline:none
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:#38a89e;
+  box-shadow:0 0 0 3px #e6f6f4
+}
+
+.primary,
+.download{
+  width:100%;
+  border:0;
+  border-radius:12px;
+  padding:14px 16px;
+  background:linear-gradient(135deg,#0f766e,#0b5cab);
+  color:#fff;
+  font-weight:900;
+  font-size:15px;
+  cursor:pointer;
+  text-decoration:none;
+  text-align:center;
+  display:block
+}
+
+.primary:hover,
+.download:hover{
+  background:linear-gradient(135deg,#0b665f,#094d91)
+}
+
+.primary:disabled{
+  opacity:.45;
+  cursor:not-allowed
+}
+
+.status{
+  font-size:13px;
+  color:#66798d;
+  margin-top:12px;
+  line-height:1.45
+}
+
+.result{
+  margin-top:15px;
+  border-top:1px solid #e8eef3;
+  padding-top:15px;
+  display:flex;
+  flex-direction:column;
+  gap:12px
+}
+
+.result b{
+  display:block;
+  color:#16805f
+}
+
+.result small{
+  display:block;
+  color:#718399;
+  margin-top:3px
+}
+
+.privacy{
+  margin:18px 0 0;
+  text-align:center;
+  color:#687b90;
+  font-size:13px
+}
+
+.hidden{
+  display:none!important
+}
+
+.second{
+  margin-top:12px
+}
+
+.second input{
+  display:block;
+  margin-top:7px
+}
+
+.controls .check{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+  margin-bottom:14px
+}
+
+.controls .check input{
+  width:auto
+}
+
+@media(max-width:900px){
+
+  .grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .workspace{
+    grid-template-columns:1fr
+  }
+
+  .bar nav{
+    display:none
+  }
+
+  .hero h1{
+    font-size:38px
+  }
+}
+
+@media(max-width:560px){
+
+  .container,
+  .tool-page{
+    padding-left:13px;
+    padding-right:13px
+  }
+
+  .grid{
+    grid-template-columns:1fr
+  }
+
+  .hero{
+    padding:46px 15px
+  }
+
+  .hero h1{
+    font-size:32px
+  }
+
+  .tool-title h1{
+    font-size:25px
+  }
+
+  .row{
+    grid-template-columns:1fr
+  }
+
+  .panel{
+    padding:15px
+  }
+
+  .previewbox{
+    min-height:230px
+  }
+
+  footer{
+    display:block
+  }
+
+  .back{
+    font-size:13px
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<header class="top"><div class="bar"><a class="brand" href="#"><span class="mark">JOS</span><span><b>Magic Print</b><small>IMAGE TOOLS Created By Mr.Suman Jana </small></span></a><a class="back" href="https://suman9907bit.github.io/pdf-cpmoser/">← All Tools</a></div></header>
+<main class="tool-page"><div class="tool-title"><div class="bigico">🧱</div><div><h1>Social Media Resize</h1><p>Create a simple PDF from one image.</p></div></div>
+<div class="workspace">
+<section class="panel upload-panel"><label class="drop" id="drop"><input type="file" id="file" accept="image/*"><span class="uploadIcon">⬆</span><b>Choose Image</b><small>or drag &amp; drop JPG, PNG or WebP</small></label><div id="secondWrap" class="second hidden"><label>Second image<input type="file" id="file2" accept="image/*"></label></div><div id="info" class="fileinfo hidden"></div><div class="previewbox"><canvas id="preview"></canvas><div id="placeholder">Preview will appear here</div></div></section>
+<section class="panel controls"><h2>Settings</h2><div id="controls"><div class="field"><label>Preset</label><select id="preset"><option value="ig">Instagram 1080×1080</option><option value="wa">WhatsApp DP 500×500</option><option value="yt">YouTube Thumbnail 1280×720</option><option value="story">Story 1080×1920</option></select></div><div class="field"><label>Fit</label><select id="fit"><option value="contain">No crop</option><option value="cover">Crop to fill</option></select></div></div><button class="primary" id="process" disabled="">Process Image</button><div id="status" class="status"></div><div id="result" class="result hidden"><div><b>Result ready</b><small id="resultMeta"></small></div><a id="download" class="download" download="printpilot-result.jpg">Download</a></div></section>
+</div><div class="privacy">🔒 Core image processing happens in your browser. The selected image is not uploaded to our server.</div></main>
+<script>window.PP_TOOL="social";window.PP_PRESET=50;</script>
+
+<script>
+(()=>{
+const tool=window.PP_TOOL||'compress',preset=window.PP_PRESET||50;
+const $=id=>document.getElementById(id), file=$('file'), file2=$('file2'), preview=$('preview'), ctx=preview.getContext('2d'), controls=$('controls'), process=$('process'), info=$('info'), status=$('status'), result=$('result'), download=$('download'), resultMeta=$('resultMeta'), drop=$('drop');
+let img=null,img2=null,srcFile=null, crop=null;
+const field=(label,html)=>`<div class="field"><label>${label}</label>${html}</div>`;
+const num=(id,val,min=1,step=1)=>`<input type="number" id="${id}" value="${val}" min="${min}" step="${step}">`;
+const sel=(id,opts)=>`<select id="${id}">${opts.map(o=>`<option value="${o[0]}">${o[1]}</option>`).join('')}</select>`;
+const mimeSel=()=>field('Output format',sel('format',[['image/jpeg','JPG'],['image/png','PNG'],['image/webp','WebP']]));
+function setupControls(){
+ let h='';
+ if(tool==='compress') h=field('Target size (KB)',num('kb',preset))+field('Minimum quality',num('minq',10,1))+`<p class="status">The tool tries to stay at or below the requested size by adjusting JPG/WebP quality and dimensions if needed.</p>`;
+ else if(tool==='resize-pixel') h=`<div class="row">${field('Width (px)',num('w',800))}${field('Height (px)',num('h',600))}</div><label class="check"><input type="checkbox" id="keep" checked> Keep aspect ratio</label>`+mimeSel();
+ else if(tool==='passport') h=field('Preset',sel('preset',[['35x45','35 × 45 mm (300 DPI)'],['2x2','2 × 2 inch (300 DPI)'],['600','600 × 600 px'],['35x45_200','35 × 45 mm (200 DPI)']]))+field('Background',sel('bg',[['white','White'],['original','Keep original']]));
+ else if(tool==='signature') h=field('Preset',sel('preset',[['6x2','6 × 2 cm (300 DPI)'],['50x20','50 × 20 mm (300 DPI)'],['custom','Custom pixels']]))+`<div class="row">${field('Width',num('w',600))}${field('Height',num('h',200))}</div>`;
+ else if(tool==='increase-kb') h=field('Target size (KB)',num('kb',200))+field('Output',sel('format',[['image/jpeg','JPG'],['image/png','PNG']]));
+ else if(['convert','jpg','png','webp'].includes(tool)) h=(tool==='convert'?mimeSel():'')+field('Quality (JPG/WebP)',`<input type="range" id="quality" min="10" max="100" value="92"><div id="qv">92%</div>`);
+ else if(tool==='crop') h=`<div class="row">${field('X',num('x',0,0))}${field('Y',num('y',0,0))}${field('Width',num('cw',300))}${field('Height',num('ch',300))}</div><p class="status">Tip: enter the crop box dimensions after checking the preview size.</p>`+mimeSel();
+ else if(tool==='rotate') h=field('Rotate',sel('deg',[['90','90° clockwise'],['180','180°'],['270','270° clockwise']]))+mimeSel();
+ else if(tool==='flip') h=field('Direction',sel('dir',[['h','Horizontal'],['v','Vertical']]))+mimeSel();
+ else if(tool==='grayscale') h=mimeSel();
+ else if(tool==='blur') h=field('Blur strength',`<input type="range" id="strength" min="1" max="30" value="8"><div id="sv">8px</div>`)+mimeSel();
+ else if(tool==='pixelate') h=field('Pixel size',`<input type="range" id="strength" min="2" max="50" value="12"><div id="sv">12px</div>`)+mimeSel();
+ else if(tool==='border') h=field('Border width (px)',num('bw',20,0))+field('Border color',`<input type="color" id="bc" value="#ffffff">`)+mimeSel();
+ else if(tool==='round') h=field('Corner radius (px)',num('radius',60,0))+field('Background color',`<input type="color" id="bc" value="#ffffff">`)+mimeSel();
+ else if(tool==='watermark') h=field('Watermark text',`<input id="text" value="PrintPilot">`)+`<div class="row">${field('Font size',num('fs',42))}${field('Opacity',`<input type="range" id="op" min="10" max="100" value="55">`)}</div>`+field('Position',sel('pos',[['center','Center'],['br','Bottom right'],['tl','Top left']]))+mimeSel();
+ else if(tool==='join'||tool==='photo-sign'){ $('secondWrap').classList.remove('hidden'); h=field('Layout',sel('layout',[['v','Vertical'],['h','Horizontal']]))+field('Gap (px)',num('gap',20,0))+mimeSel(); }
+ else if(['cm','mm','inch'].includes(tool)) h=`<div class="row">${field('Width',num('uw',3.5,0.1,.1))}${field('Height',num('uh',4.5,0.1,.1))}</div>`+field('DPI',sel('dpi',[['200','200'],['300','300'],['600','600']]))+mimeSel();
+ else if(tool==='dpi') h=field('DPI',sel('dpi',[['200','200 DPI'],['300','300 DPI'],['600','600 DPI']]))+field('JPG Quality',`<input type="range" id="quality" min="40" max="100" value="95">`);
+ else if(tool==='a4') h=field('DPI',sel('dpi',[['150','150 DPI'],['200','200 DPI'],['300','300 DPI']]))+field('Fit',sel('fit',[['contain','Contain (no crop)'],['cover','Cover (crop)']]))+mimeSel();
+ else if(['pan','ssc','upsc'].includes(tool)) h=field('Preset',sel('preset',tool==='pan'?[['pan','PAN-style 213×213 px'],['35x45','35×45mm 300 DPI']]:tool==='ssc'?[['ssc','SSC 300×400 px'],['small','200×230 px']]:[['upsc','UPSC 350×350 px'],['35x45','35×45mm 300 DPI']]))+field('Target max size (KB)',num('kb',50))+field('Background',sel('bg',[['white','White'],['original','Original']]));
+ else if(tool==='social') h=field('Preset',sel('preset',[['ig','Instagram 1080×1080'],['wa','WhatsApp DP 500×500'],['yt','YouTube Thumbnail 1280×720'],['story','Story 1080×1920']]))+field('Fit',sel('fit',[['contain','No crop'],['cover','Crop to fill']]));
+ else if(tool==='favicon') h=field('Icon size',sel('size',[['16','16×16'],['32','32×32'],['48','48×48'],['180','180×180'],['192','192×192'],['512','512×512']]))+field('Fit',sel('fit',[['contain','Contain'],['cover','Cover']]));
+ else if(tool==='image-pdf') h=field('Page size',sel('page',[['a4','A4'],['image','Image size']]))+field('Margin (mm)',num('margin',10,0));
+ controls.innerHTML=h;
+ const q=$('quality'); if(q) q.oninput=()=>{const v=$('qv');if(v)v.textContent=q.value+'%'}; const s=$('strength'); if(s)s.oninput=()=>{const v=$('sv');if(v)v.textContent=s.value+'px'};
+}
+setupControls();
+function loadImage(f,second=false){
+ if(!f)return;
+ const allowedTypes=['image/jpeg','image/png','image/webp'];
+ const allowedExt=/\.(jpe?g|png|webp)$/i;
+ const maxBytes=20*1024*1024;
+ if(!allowedTypes.includes((f.type||'').toLowerCase()) || !allowedExt.test(f.name||'')){
+   status.textContent='Only JPG, JPEG, PNG or WebP image files are allowed.';
+   return;
+ }
+ if(f.size<=0 || f.size>maxBytes){
+   status.textContent='File size must be between 1 byte and 20 MB.';
+   return;
+ }
+ const r=new FileReader();
+ r.onload=e=>{
+   const im=new Image();
+   im.onerror=()=>{status.textContent='Invalid or damaged image file.';};
+   im.onload=()=>{
+     const pixels=im.naturalWidth*im.naturalHeight;
+     if(im.naturalWidth<1 || im.naturalHeight<1 || im.naturalWidth>12000 || im.naturalHeight>12000 || pixels>80000000){
+       status.textContent='Image dimensions are too large.';
+       return;
+     }
+     if(second){
+       img2=im;
+     }else{
+       img=im;
+       srcFile=f;
+       drawPreview(im);
+       info.classList.remove('hidden');
+       info.textContent=`${f.name} • ${im.naturalWidth}×${im.naturalHeight}px • ${(f.size/1024).toFixed(1)} KB`;
+       process.disabled=false;
+     }
+   };
+   im.src=e.target.result;
+ };
+ r.onerror=()=>{status.textContent='Could not read this file.';};
+ r.readAsDataURL(f);
+}
+file.onchange=()=>loadImage(file.files[0]); if(file2)file2.onchange=()=>loadImage(file2.files[0],true);
+['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('drag')}));['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('drag')}));drop.addEventListener('drop',e=>{if(e.dataTransfer.files[0]){file.files=e.dataTransfer.files;loadImage(e.dataTransfer.files[0])}});
+function drawPreview(im){const max=900,scale=Math.min(1,max/im.naturalWidth,max/im.naturalHeight); preview.width=Math.round(im.naturalWidth*scale);preview.height=Math.round(im.naturalHeight*scale);ctx.clearRect(0,0,preview.width,preview.height);ctx.drawImage(im,0,0,preview.width,preview.height);preview.style.display='block';$('placeholder').style.display='none'}
+function makeCanvas(w,h){const c=document.createElement('canvas');c.width=Math.max(1,Math.round(w));c.height=Math.max(1,Math.round(h));return c}
+function fitDraw(c,im,mode='contain',bg='#fff'){const x=c.getContext('2d');x.fillStyle=bg;x.fillRect(0,0,c.width,c.height);const r=mode==='cover'?Math.max(c.width/im.naturalWidth,c.height/im.naturalHeight):Math.min(c.width/im.naturalWidth,c.height/im.naturalHeight);const w=im.naturalWidth*r,h=im.naturalHeight*r;x.drawImage(im,(c.width-w)/2,(c.height-h)/2,w,h);return c}
+function blob(c,mime='image/jpeg',q=.92){return new Promise(res=>c.toBlob(res,mime,q))}
+async function compressExact(c,targetKB,mime='image/jpeg',minQ=.1){let target=targetKB*1024,work=c,q=.95,b=await blob(work,mime,q);for(let rounds=0;rounds<8&&b.size>target;rounds++){let lo=minQ,hi=q,best=null;for(let i=0;i<8;i++){let mid=(lo+hi)/2,bb=await blob(work,mime,mid);if(bb.size<=target){best=bb;lo=mid}else hi=mid}if(best)return best;const sc=Math.sqrt(target/b.size)*.93;const nw=Math.max(50,work.width*sc),nh=Math.max(50,work.height*sc);const n=makeCanvas(nw,nh);n.getContext('2d').drawImage(work,0,0,n.width,n.height);work=n;q=.88;b=await blob(work,mime,q)}return b}
+function out(blobObj,name){const url=URL.createObjectURL(blobObj);download.href=url;download.download=name;resultMeta.textContent=`${(blobObj.size/1024).toFixed(1)} KB`;result.classList.remove('hidden');status.textContent='Done. Your file is ready.'}
+function exportName(ext){return 'printpilot-'+Date.now()+'.'+ext}
+function fmt(){return $('format')?$('format').value:(tool==='png'?'image/png':tool==='webp'?'image/webp':'image/jpeg')}
+process.onclick=async()=>{if(!img)return;process.disabled=true;status.textContent='Processing...';result.classList.add('hidden');try{let c,mime=fmt(),b;
+ if(tool==='compress'){c=makeCanvas(img.naturalWidth,img.naturalHeight);c.getContext('2d').drawImage(img,0,0);b=await compressExact(c,+$('kb').value,'image/jpeg',+$('minq').value/100);out(b,exportName('jpg'));}
+ else if(tool==='resize-pixel'){let w=+$('w').value,h=+$('h').value;if($('keep').checked){h=Math.round(w*img.naturalHeight/img.naturalWidth)}c=fitDraw(makeCanvas(w,h),img,'cover');b=await blob(c,mime,.92);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='passport'){let p=$('preset').value,w,h;if(p==='35x45'){w=Math.round(35/25.4*300);h=Math.round(45/25.4*300)}else if(p==='2x2'){w=h=600}else if(p==='600'){w=h=600}else{w=Math.round(35/25.4*200);h=Math.round(45/25.4*200)}c=fitDraw(makeCanvas(w,h),img,'cover',$('bg').value==='white'?'#fff':'#fff');b=await blob(c,'image/jpeg',.95);out(b,exportName('jpg'))}
+ else if(tool==='signature'){let p=$('preset').value,w,h;if(p==='6x2'){w=Math.round(6/2.54*300);h=Math.round(2/2.54*300)}else if(p==='50x20'){w=Math.round(50/25.4*300);h=Math.round(20/25.4*300)}else{w=+$('w').value;h=+$('h').value}c=fitDraw(makeCanvas(w,h),img,'contain','#fff');b=await blob(c,'image/jpeg',.94);out(b,exportName('jpg'))}
+ else if(tool==='increase-kb'){c=makeCanvas(img.naturalWidth,img.naturalHeight);c.getContext('2d').drawImage(img,0,0);mime=$('format').value;let q=.98;b=await blob(c,mime,q);let target=+$('kb').value*1024;if(b.size<target&&mime==='image/jpeg'){let cc=c;for(let i=0;i<6&&b.size<target;i++){const sc=1.12;let n=makeCanvas(cc.width*sc,cc.height*sc);n.getContext('2d').drawImage(cc,0,0,n.width,n.height);cc=n;b=await blob(cc,mime,1)} }out(b,exportName(mime==='image/png'?'png':'jpg'))}
+ else if(['convert','jpg','png','webp'].includes(tool)){c=makeCanvas(img.naturalWidth,img.naturalHeight);if(mime==='image/jpeg'){c.getContext('2d').fillStyle='#fff';c.getContext('2d').fillRect(0,0,c.width,c.height)}c.getContext('2d').drawImage(img,0,0);b=await blob(c,mime,+$('quality').value/100);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='crop'){let x=+$('x').value,y=+$('y').value,w=Math.min(+$('cw').value,img.naturalWidth-x),h=Math.min(+$('ch').value,img.naturalHeight-y);c=makeCanvas(w,h);c.getContext('2d').drawImage(img,x,y,w,h,0,0,w,h);b=await blob(c,mime,.92);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='rotate'){let d=+$('deg').value,swap=d===90||d===270;c=makeCanvas(swap?img.naturalHeight:img.naturalWidth,swap?img.naturalWidth:img.naturalHeight);let x=c.getContext('2d');x.translate(c.width/2,c.height/2);x.rotate(d*Math.PI/180);x.drawImage(img,-img.naturalWidth/2,-img.naturalHeight/2);b=await blob(c,mime,.92);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='flip'){c=makeCanvas(img.naturalWidth,img.naturalHeight);let x=c.getContext('2d');if($('dir').value==='h'){x.translate(c.width,0);x.scale(-1,1)}else{x.translate(0,c.height);x.scale(1,-1)}x.drawImage(img,0,0);b=await blob(c,mime,.92);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='grayscale'){c=makeCanvas(img.naturalWidth,img.naturalHeight);let x=c.getContext('2d');x.filter='grayscale(1)';x.drawImage(img,0,0);b=await blob(c,mime,.92);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='blur'){c=makeCanvas(img.naturalWidth,img.naturalHeight);let x=c.getContext('2d');x.filter=`blur(${$('strength').value}px)`;x.drawImage(img,0,0);b=await blob(c,mime,.92);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='pixelate'){let s=+$('strength').value,sw=Math.max(1,Math.round(img.naturalWidth/s)),sh=Math.max(1,Math.round(img.naturalHeight/s)),small=makeCanvas(sw,sh);small.getContext('2d').drawImage(img,0,0,sw,sh);c=makeCanvas(img.naturalWidth,img.naturalHeight);let x=c.getContext('2d');x.imageSmoothingEnabled=false;x.drawImage(small,0,0,c.width,c.height);b=await blob(c,mime,.92);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='border'){let bw=+$('bw').value;c=makeCanvas(img.naturalWidth+bw*2,img.naturalHeight+bw*2);let x=c.getContext('2d');x.fillStyle=$('bc').value;x.fillRect(0,0,c.width,c.height);x.drawImage(img,bw,bw);b=await blob(c,mime,.92);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='round'){c=makeCanvas(img.naturalWidth,img.naturalHeight);let x=c.getContext('2d'),r=Math.min(+$('radius').value,c.width/2,c.height/2);x.fillStyle=$('bc').value;x.fillRect(0,0,c.width,c.height);x.beginPath();x.moveTo(r,0);x.arcTo(c.width,0,c.width,c.height,r);x.arcTo(c.width,c.height,0,c.height,r);x.arcTo(0,c.height,0,0,r);x.arcTo(0,0,c.width,0,r);x.closePath();x.clip();x.drawImage(img,0,0);b=await blob(c,mime,.92);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='watermark'){c=makeCanvas(img.naturalWidth,img.naturalHeight);let x=c.getContext('2d');x.drawImage(img,0,0);let fs=+$('fs').value;x.globalAlpha=+$('op').value/100;x.font=`900 ${fs}px Arial`;x.fillStyle='#ffffff';x.strokeStyle='rgba(0,0,0,.45)';x.lineWidth=Math.max(2,fs/15);let text=$('text').value,m=x.measureText(text),px=20,py=fs+20;if($('pos').value==='center'){px=(c.width-m.width)/2;py=c.height/2}else if($('pos').value==='br'){px=c.width-m.width-20;py=c.height-20}x.strokeText(text,px,py);x.fillText(text,px,py);x.globalAlpha=1;b=await blob(c,mime,.92);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='join'||tool==='photo-sign'){if(!img2)throw Error('Choose the second image first.');let g=+$('gap').value,vertical=$('layout').value==='v',w=vertical?Math.max(img.naturalWidth,img2.naturalWidth):img.naturalWidth+img2.naturalWidth+g,h=vertical?img.naturalHeight+img2.naturalHeight+g:Math.max(img.naturalHeight,img2.naturalHeight);c=makeCanvas(w,h);let x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,w,h);x.drawImage(img,0,0);if(vertical)x.drawImage(img2,0,img.naturalHeight+g);else x.drawImage(img2,img.naturalWidth+g,0);b=await blob(c,mime,.94);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(['cm','mm','inch'].includes(tool)){let dpi=+$('dpi').value,uw=+$('uw').value,uh=+$('uh').value,inchW=tool==='cm'?uw/2.54:tool==='mm'?uw/25.4:uw,inchH=tool==='cm'?uh/2.54:tool==='mm'?uh/25.4:uh;c=fitDraw(makeCanvas(inchW*dpi,inchH*dpi),img,'cover','#fff');b=await blob(c,mime,.94);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(tool==='dpi'){c=makeCanvas(img.naturalWidth,img.naturalHeight);c.getContext('2d').drawImage(img,0,0);b=await blob(c,'image/jpeg',+$('quality').value/100);let ab=await b.arrayBuffer(),u=new Uint8Array(ab),dpi=+$('dpi').value;if(u[0]===0xFF&&u[1]===0xD8&&u[2]===0xFF&&u[3]===0xE0&&u.length>18){u[13]=1;u[14]=(dpi>>8)&255;u[15]=dpi&255;u[16]=(dpi>>8)&255;u[17]=dpi&255}out(new Blob([u],{type:'image/jpeg'}),exportName('jpg'))}
+ else if(tool==='a4'){let dpi=+$('dpi').value,w=Math.round(8.2677*dpi),h=Math.round(11.6929*dpi);c=fitDraw(makeCanvas(w,h),img,$('fit').value,'#fff');b=await blob(c,mime,.92);out(b,exportName(mime.split('/')[1].replace('jpeg','jpg')))}
+ else if(['pan','ssc','upsc'].includes(tool)){let p=$('preset').value,w,h;if(p==='pan'){w=h=213}else if(p==='ssc'){w=300;h=400}else if(p==='small'){w=200;h=230}else if(p==='upsc'){w=h=350}else{w=Math.round(35/25.4*300);h=Math.round(45/25.4*300)}c=fitDraw(makeCanvas(w,h),img,'cover','#fff');b=await compressExact(c,+$('kb').value,'image/jpeg',.2);out(b,exportName('jpg'))}
+ else if(tool==='social'){let p=$('preset').value,wh={ig:[1080,1080],wa:[500,500],yt:[1280,720],story:[1080,1920]}[p];c=fitDraw(makeCanvas(wh[0],wh[1]),img,$('fit').value,'#fff');b=await blob(c,'image/jpeg',.94);out(b,exportName('jpg'))}
+ else if(tool==='favicon'){let s=+$('size').value;c=fitDraw(makeCanvas(s,s),img,$('fit').value,'transparent');b=await blob(c,'image/png');out(b,'favicon-'+s+'x'+s+'.png')}
+ else if(tool==='image-pdf'){c=makeCanvas(img.naturalWidth,img.naturalHeight);c.getContext('2d').drawImage(img,0,0);let jpg=await blob(c,'image/jpeg',.92),bytes=new Uint8Array(await jpg.arrayBuffer());let margin=+$('margin').value, pw,ph;if($('page').value==='a4'){pw=595.28;ph=841.89}else{pw=img.naturalWidth;ph=img.naturalHeight}let m=margin*72/25.4,scale=Math.min((pw-2*m)/img.naturalWidth,(ph-2*m)/img.naturalHeight),dw=img.naturalWidth*scale,dh=img.naturalHeight*scale,dx=(pw-dw)/2,dy=(ph-dh)/2;let pdf=makePdfJpeg(bytes,img.naturalWidth,img.naturalHeight,pw,ph,dx,dy,dw,dh);out(new Blob([pdf],{type:'application/pdf'}),'printpilot-image.pdf')}
+ }catch(e){status.textContent='Error: '+e.message}finally{process.disabled=false}}
+function makePdfJpeg(jpeg,w,h,pw,ph,x,y,dw,dh){const enc=s=>new TextEncoder().encode(s),parts=[],offs=[0];let len=0;const add=a=>{parts.push(a);len+=a.length};add(enc('%PDF-1.4\n'));function obj(n,body){offs[n]=len;add(enc(`${n} 0 obj\n${body}\nendobj\n`))}obj(1,'<< /Type /Catalog /Pages 2 0 R >>');obj(2,'<< /Type /Pages /Kids [3 0 R] /Count 1 >>');obj(3,`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pw.toFixed(2)} ${ph.toFixed(2)}] /Resources << /XObject << /Im0 5 0 R >> >> /Contents 4 0 R >>`);let stream=`q\n${dw.toFixed(2)} 0 0 ${dh.toFixed(2)} ${x.toFixed(2)} ${y.toFixed(2)} cm\n/Im0 Do\nQ\n`;obj(4,`<< /Length ${stream.length} >>\nstream\n${stream}endstream`);offs[5]=len;add(enc(`5 0 obj\n<< /Type /XObject /Subtype /Image /Width ${w} /Height ${h} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpeg.length} >>\nstream\n`));add(jpeg);add(enc('\nendstream\nendobj\n'));let xref=len;add(enc('xref\n0 6\n0000000000 65535 f \n'));for(let i=1;i<=5;i++)add(enc(String(offs[i]).padStart(10,'0')+' 00000 n \n'));add(enc(`trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`));let all=new Uint8Array(len),p=0;for(const a of parts){all.set(a,p);p+=a.length}return all}
+})();
+
+</script>
+</body></html>
